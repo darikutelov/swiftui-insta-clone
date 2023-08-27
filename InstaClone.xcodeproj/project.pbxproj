@@ -10,6 +10,12 @@
 		9C6DED5F2A9B4F9100B2904B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DED5E2A9B4F9100B2904B /* GoogleService-Info.plist */; };
 		9C7A66182A98F8A800A7B578 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A66172A98F8A800A7B578 /* UploadPostView.swift */; };
 		9C7A661A2A98FECF00A7B578 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */; };
+		9CD2F8012A9B5D7E004589CD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2F8002A9B5D7E004589CD /* FirebaseAuth */; };
+		9CD2F8032A9B5D7E004589CD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2F8022A9B5D7E004589CD /* FirebaseFirestore */; };
+		9CD2F8052A9B5D7E004589CD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2F8042A9B5D7E004589CD /* FirebaseFirestoreSwift */; };
+		9CD2F8072A9B5D7E004589CD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2F8062A9B5D7E004589CD /* FirebaseStorage */; };
+		9CD2F80B2A9B5F11004589CD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2F80A2A9B5F11004589CD /* AuthService.swift */; };
+		9CD2F80E2A9B606F004589CD /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2F80D2A9B606F004589CD /* ContentViewModel.swift */; };
 		B14E3C2A2A98CD130064C76F /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E3C292A98CD130064C76F /* PostGridView.swift */; };
 		B14E3C2C2A98CFDE0064C76F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E3C2B2A98CFDE0064C76F /* ProfileHeaderView.swift */; };
 		B18C56EF2A82876F002FDBBE /* InstaCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18C56EE2A82876F002FDBBE /* InstaCloneApp.swift */; };
@@ -38,6 +44,8 @@
 		9C6DED5E2A9B4F9100B2904B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C7A66172A98F8A800A7B578 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
+		9CD2F80A2A9B5F11004589CD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		9CD2F80D2A9B606F004589CD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		B14E3C292A98CD130064C76F /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		B14E3C2B2A98CFDE0064C76F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileHeader\U0010View.swift"; sourceTree = "<group>"; };
 		B18C56EB2A82876F002FDBBE /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,12 +76,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD2F8012A9B5D7E004589CD /* FirebaseAuth in Frameworks */,
+				9CD2F8072A9B5D7E004589CD /* FirebaseStorage in Frameworks */,
+				9CD2F8032A9B5D7E004589CD /* FirebaseFirestore in Frameworks */,
+				9CD2F8052A9B5D7E004589CD /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CD2F8082A9B5EDB004589CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1E3D4F72A83C14200CAFC68 /* LoginView.swift */,
+				B1E3D4F92A83CB4D00CAFC68 /* AddEmailView.swift */,
+				B1E3D4FF2A83CF9D00CAFC68 /* CreateUsernameView.swift */,
+				B1E3D5012A83D1E700CAFC68 /* CreatePasswordView.swift */,
+				B19193EA2A8518EF009E87A3 /* FinalSignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CD2F8092A9B5EFA004589CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2F80A2A9B5F11004589CD /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9CD2F80C2A9B6059004589CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B18C56F02A82876F002FDBBE /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CD2F80F2A9B60FA004589CD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2F80D2A9B606F004589CD /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B18C56E22A82876F002FDBBE = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +146,6 @@
 				B18C56FE2A82878E002FDBBE /* Extensions */,
 				B18C56FD2A82878B002FDBBE /* Model */,
 				B18C56FC2A828787002FDBBE /* Services */,
-				B18C56F02A82876F002FDBBE /* ContentView.swift */,
 				9C6DED5E2A9B4F9100B2904B /* GoogleService-Info.plist */,
 				B18C56F22A828771002FDBBE /* Assets.xcassets */,
 				B18C56F42A828771002FDBBE /* Preview Content */,
@@ -163,11 +210,8 @@
 		B18C57012A8287DD002FDBBE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				B1E3D4F72A83C14200CAFC68 /* LoginView.swift */,
-				B1E3D4F92A83CB4D00CAFC68 /* AddEmailView.swift */,
-				B1E3D4FF2A83CF9D00CAFC68 /* CreateUsernameView.swift */,
-				B1E3D5012A83D1E700CAFC68 /* CreatePasswordView.swift */,
-				B19193EA2A8518EF009E87A3 /* FinalSignUpView.swift */,
+				9CD2F8092A9B5EFA004589CD /* Service */,
+				9CD2F8082A9B5EDB004589CD /* Views */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -194,6 +238,8 @@
 		B18C57042A8287FE002FDBBE /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				9CD2F80C2A9B6059004589CD /* Views */,
+				9CD2F80F2A9B60FA004589CD /* ViewModels */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -250,6 +296,12 @@
 			dependencies = (
 			);
 			name = InstaClone;
+			packageProductDependencies = (
+				9CD2F8002A9B5D7E004589CD /* FirebaseAuth */,
+				9CD2F8022A9B5D7E004589CD /* FirebaseFirestore */,
+				9CD2F8042A9B5D7E004589CD /* FirebaseFirestoreSwift */,
+				9CD2F8062A9B5D7E004589CD /* FirebaseStorage */,
+			);
 			productName = InstaClone;
 			productReference = B18C56EB2A82876F002FDBBE /* InstaClone.app */;
 			productType = "com.apple.product-type.application";
@@ -278,6 +330,9 @@
 				Base,
 			);
 			mainGroup = B18C56E22A82876F002FDBBE;
+			packageReferences = (
+				9CD2F7FF2A9B5D7E004589CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B18C56EC2A82876F002FDBBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -306,12 +361,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19193EB2A8518EF009E87A3 /* FinalSignUpView.swift in Sources */,
+				9CD2F80B2A9B5F11004589CD /* AuthService.swift in Sources */,
 				B19193ED2A851E6B009E87A3 /* User.swift in Sources */,
 				B1E3D4F42A83ADA700CAFC68 /* FeedCell.swift in Sources */,
 				B1E3D5022A83D1E700CAFC68 /* CreatePasswordView.swift in Sources */,
 				B14E3C2C2A98CFDE0064C76F /* ProfileHeaderView.swift in Sources */,
 				B1E3D5002A83CF9D00CAFC68 /* CreateUsernameView.swift in Sources */,
 				B18C570B2A8289DB002FDBBE /* ProfileView.swift in Sources */,
+				9CD2F80E2A9B606F004589CD /* ContentViewModel.swift in Sources */,
 				B18C56F12A82876F002FDBBE /* ContentView.swift in Sources */,
 				B1E3D4F82A83C14200CAFC68 /* LoginView.swift in Sources */,
 				B1E3D4FE2A83CF1E00CAFC68 /* IGButtonModifier.swift in Sources */,
@@ -461,8 +518,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +527,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bg.digitals.InstaClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -490,8 +550,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,9 +559,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bg.digitals.InstaClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -527,6 +590,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CD2F7FF2A9B5D7E004589CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CD2F8002A9B5D7E004589CD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CD2F7FF2A9B5D7E004589CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9CD2F8022A9B5D7E004589CD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CD2F7FF2A9B5D7E004589CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		9CD2F8042A9B5D7E004589CD /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CD2F7FF2A9B5D7E004589CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		9CD2F8062A9B5D7E004589CD /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CD2F7FF2A9B5D7E004589CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B18C56E32A82876F002FDBBE /* Project object */;
 }
