@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C6DED5F2A9B4F9100B2904B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DED5E2A9B4F9100B2904B /* GoogleService-Info.plist */; };
+		9C7A66182A98F8A800A7B578 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A66172A98F8A800A7B578 /* UploadPostView.swift */; };
+		9C7A661A2A98FECF00A7B578 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */; };
 		B14E3C2A2A98CD130064C76F /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E3C292A98CD130064C76F /* PostGridView.swift */; };
 		B14E3C2C2A98CFDE0064C76F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E3C2B2A98CFDE0064C76F /* ProfileHeaderView.swift */; };
 		B18C56EF2A82876F002FDBBE /* InstaCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18C56EE2A82876F002FDBBE /* InstaCloneApp.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C6DED5E2A9B4F9100B2904B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C7A66172A98F8A800A7B578 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
+		9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		B14E3C292A98CD130064C76F /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		B14E3C2B2A98CFDE0064C76F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileHeader\U0010View.swift"; sourceTree = "<group>"; };
 		B18C56EB2A82876F002FDBBE /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +99,7 @@
 				B18C56FD2A82878B002FDBBE /* Model */,
 				B18C56FC2A828787002FDBBE /* Services */,
 				B18C56F02A82876F002FDBBE /* ContentView.swift */,
+				9C6DED5E2A9B4F9100B2904B /* GoogleService-Info.plist */,
 				B18C56F22A828771002FDBBE /* Assets.xcassets */,
 				B18C56F42A828771002FDBBE /* Preview Content */,
 			);
@@ -202,6 +209,8 @@
 		B18C57062A828825002FDBBE /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
+				9C7A66172A98F8A800A7B578 /* UploadPostView.swift */,
+				9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 			files = (
 				B18C56F62A828771002FDBBE /* Preview Assets.xcassets in Resources */,
 				B18C56F32A828771002FDBBE /* Assets.xcassets in Resources */,
+				9C6DED5F2A9B4F9100B2904B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,9 +318,11 @@
 				B18C56EF2A82876F002FDBBE /* InstaCloneApp.swift in Sources */,
 				B1E3D4FA2A83CB4D00CAFC68 /* AddEmailView.swift in Sources */,
 				B1E3D4F62A83B78200CAFC68 /* SearchView.swift in Sources */,
+				9C7A661A2A98FECF00A7B578 /* UploadPostViewModel.swift in Sources */,
 				B14E3C2A2A98CD130064C76F /* PostGridView.swift in Sources */,
 				B1E3D4FC2A83CE7F00CAFC68 /* IGTextFieldModifier.swift in Sources */,
 				B18C57102A829001002FDBBE /* UserStatView.swift in Sources */,
+				9C7A66182A98F8A800A7B578 /* UploadPostView.swift in Sources */,
 				B1E3D4F22A83AD9800CAFC68 /* FeedView.swift in Sources */,
 				B19193F12A852DB1009E87A3 /* Post.swift in Sources */,
 				B18C57092A8288AD002FDBBE /* MainTabView.swift in Sources */,
