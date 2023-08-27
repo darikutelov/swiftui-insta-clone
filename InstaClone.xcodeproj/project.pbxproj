@@ -10,6 +10,8 @@
 		9C6DED5F2A9B4F9100B2904B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DED5E2A9B4F9100B2904B /* GoogleService-Info.plist */; };
 		9C7A66182A98F8A800A7B578 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A66172A98F8A800A7B578 /* UploadPostView.swift */; };
 		9C7A661A2A98FECF00A7B578 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */; };
+		9CB346482A9BA15200E028B8 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB346472A9BA15200E028B8 /* RegistrationViewModel.swift */; };
+		9CB3464A2A9BAB6F00E028B8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB346492A9BAB6F00E028B8 /* LoginViewModel.swift */; };
 		9CD2F8012A9B5D7E004589CD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2F8002A9B5D7E004589CD /* FirebaseAuth */; };
 		9CD2F8032A9B5D7E004589CD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2F8022A9B5D7E004589CD /* FirebaseFirestore */; };
 		9CD2F8052A9B5D7E004589CD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2F8042A9B5D7E004589CD /* FirebaseFirestoreSwift */; };
@@ -44,6 +46,8 @@
 		9C6DED5E2A9B4F9100B2904B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C7A66172A98F8A800A7B578 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
+		9CB346472A9BA15200E028B8 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		9CB346492A9BAB6F00E028B8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9CD2F80A2A9B5F11004589CD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9CD2F80D2A9B606F004589CD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		B14E3C292A98CD130064C76F /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CB346462A9BA12500E028B8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9CB346472A9BA15200E028B8 /* RegistrationViewModel.swift */,
+				9CB346492A9BAB6F00E028B8 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9CD2F8082A9B5EDB004589CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,8 +223,9 @@
 		B18C57012A8287DD002FDBBE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				9CD2F8092A9B5EFA004589CD /* Service */,
 				9CD2F8082A9B5EDB004589CD /* Views */,
+				9CB346462A9BA12500E028B8 /* ViewModels */,
+				9CD2F8092A9B5EFA004589CD /* Service */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -368,6 +382,7 @@
 				B14E3C2C2A98CFDE0064C76F /* ProfileHeaderView.swift in Sources */,
 				B1E3D5002A83CF9D00CAFC68 /* CreateUsernameView.swift in Sources */,
 				B18C570B2A8289DB002FDBBE /* ProfileView.swift in Sources */,
+				9CB3464A2A9BAB6F00E028B8 /* LoginViewModel.swift in Sources */,
 				9CD2F80E2A9B606F004589CD /* ContentViewModel.swift in Sources */,
 				B18C56F12A82876F002FDBBE /* ContentView.swift in Sources */,
 				B1E3D4F82A83C14200CAFC68 /* LoginView.swift in Sources */,
@@ -380,6 +395,7 @@
 				B1E3D4FC2A83CE7F00CAFC68 /* IGTextFieldModifier.swift in Sources */,
 				B18C57102A829001002FDBBE /* UserStatView.swift in Sources */,
 				9C7A66182A98F8A800A7B578 /* UploadPostView.swift in Sources */,
+				9CB346482A9BA15200E028B8 /* RegistrationViewModel.swift in Sources */,
 				B1E3D4F22A83AD9800CAFC68 /* FeedView.swift in Sources */,
 				B19193F12A852DB1009E87A3 /* Post.swift in Sources */,
 				B18C57092A8288AD002FDBBE /* MainTabView.swift in Sources */,

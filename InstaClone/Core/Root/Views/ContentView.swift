@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
-    
+    @StateObject var registrationViewModel = RegistrationViewModel()
+
     var body: some View {
         Group {
             if viewModel.userSession == nil {
                 LoginView()
+                    .environmentObject(registrationViewModel)
             } else {
                 MainTabView()
             }
@@ -24,5 +26,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(RegistrationViewModel())
     }
 }

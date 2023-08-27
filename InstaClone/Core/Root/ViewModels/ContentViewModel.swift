@@ -5,7 +5,7 @@
 //  Created by Dariy Kutelov on 27.08.23.
 //
 
-import Foundation
+import SwiftUI
 import Firebase
 import Combine
 
