@@ -1,16 +1,17 @@
 //
-//  UploadPostViewModel.swift
+//  ProfileViewModel.swift
 //  InstaClone
 //
-//  Created by Dariy Kutelov on 25.08.23.
+//  Created by Dariy Kutelov on 28.08.23.
 //
 
-import Foundation
-import PhotosUI
+import Firebase
 import SwiftUI
+import PhotosUI
 
-@MainActor
-class UploadPostViewModel: ObservableObject {
+class EditProfileViewModel: ObservableObject {
+    @Published var fullname: String = ""
+    @Published var bio: String = ""
     @Published var selectedImage: PhotosPickerItem? {
         didSet {
             Task {
@@ -18,9 +19,9 @@ class UploadPostViewModel: ObservableObject {
             }
         }
     }
+    @Published var profileImage: Image?
     
-    @Published var postImage: Image?
-    
+    @MainActor
     func loadImage(from item: PhotosPickerItem?) async {
         guard let item = item else { return }
         
@@ -30,6 +31,6 @@ class UploadPostViewModel: ObservableObject {
         
         guard let uiImage = UIImage(data: data) else { return }
         
-        postImage = Image(uiImage: uiImage)
+        profileImage = Image(uiImage: uiImage)
     }
 }
