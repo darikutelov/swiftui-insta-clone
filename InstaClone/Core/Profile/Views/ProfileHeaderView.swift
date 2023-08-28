@@ -44,8 +44,6 @@ struct ProfileHeaderView: View {
                     Text(bio)
                         .font(.footnote)
                 }
-                
-                Text(user.username)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -75,7 +73,7 @@ struct ProfileHeaderView: View {
             Divider()
         }
         .fullScreenCover(isPresented: $showEditProfile) {
-            EditProfileView()
+            EditProfileView(user: user)
         }
     }
 }
