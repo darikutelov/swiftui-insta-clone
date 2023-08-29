@@ -13,16 +13,15 @@ struct FeedCell: View {
       VStack(alignment: .leading) {
         // Image & username
         HStack {
-          Image(post.user?.profileImageUrl ?? "avatar")
-            .resizable()
-            .scaledToFill()
-            .frame(width: 40, height: 40)
-            .clipShape(Circle())
-          if let fullname = post.user?.fullname {
-            Text(fullname)
-              .font(.footnote)
-              .fontWeight(.semibold)
-          }
+            if let user = post.user {
+                CircularProfileImageView(user: user, size: .xSmall)
+                
+                if let fullname = user.fullname {
+                    Text(fullname)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
+            }
         }
         .padding(.leading, 8)
         

@@ -29,7 +29,7 @@ extension User {
     .init(
       id: NSUUID().uuidString,
       username: "Dariku",
-      profileImageUrl: "avatar",
+      profileImageUrl: nil,
       fullname: "Dariy Kutelov" ,
       bio: "Learning all the time",
       email: "dari.k@abv.bg"
@@ -37,7 +37,7 @@ extension User {
     .init(
       id: NSUUID().uuidString,
       username: "AliceMo",
-      profileImageUrl: "m-1",
+      profileImageUrl: nil,
       fullname: "Alice Morisson" ,
       bio: "Alice is cool",
       email: "alice@abv.bg"
@@ -45,7 +45,7 @@ extension User {
     .init(
       id: NSUUID().uuidString,
       username: "Barbara",
-      profileImageUrl: "m-2",
+      profileImageUrl: nil,
       fullname: "Barbara Stevens" ,
       bio: "Barbara is cool",
       email: "barbara@abv.bg"
