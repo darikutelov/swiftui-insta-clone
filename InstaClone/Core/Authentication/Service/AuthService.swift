@@ -52,12 +52,7 @@ class AuthService {
         
         guard let currentUserUid = userSession?.uid else { return }
         
-        let snapshot = try await Firestore.firestore()
-            .collection("users")
-            .document(currentUserUid)
-            .getDocument()
-        
-        self.currentUser = try? snapshot.data(as: User.self)
+        self.currentUser = try? await await UserService.fetchUser(withUid: currentUserUid)
     }
     
     func signout() {

@@ -18,10 +18,7 @@ struct UploadPostView: View {
         VStack() {
             HStack() {
                 Button {
-                    caption = ""
-                    viewModel.selectedImage = nil
-                    viewModel.postImage = nil
-                    tabIndex = 0
+                    clearPostDataAndClose()
                 } label: {
                     Text("Cancel")
                 }
@@ -31,11 +28,14 @@ struct UploadPostView: View {
                     .frame(maxWidth: .infinity)
                 
                 Button {
-                    print("New upload")
+                    Task {
+                        try await viewModel.uploadPost(caption:caption)
+                        clearPostDataAndClose()
+                    }
                 } label: {
                     Text("Upload")
                         .fontWeight(.semibold)
-
+                    
                 }
             }
             .frame(maxWidth: .infinity)
@@ -76,6 +76,13 @@ struct UploadPostView: View {
         .photosPicker(
             isPresented: $imagePickerPresented,
             selection: $viewModel.selectedImage)
+    }
+    
+    private func clearPostDataAndClose() {
+        caption = ""
+        viewModel.selectedImage = nil
+        viewModel.postImage = nil
+        tabIndex = 0
     }
 }
 

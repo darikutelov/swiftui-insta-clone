@@ -21,6 +21,7 @@
 		9CD2F8072A9B5D7E004589CD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2F8062A9B5D7E004589CD /* FirebaseStorage */; };
 		9CD2F80B2A9B5F11004589CD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2F80A2A9B5F11004589CD /* AuthService.swift */; };
 		9CD2F80E2A9B606F004589CD /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2F80D2A9B606F004589CD /* ContentViewModel.swift */; };
+		9CF189852AA0F375009BB327 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF189842AA0F375009BB327 /* FeedViewModel.swift */; };
 		9CF5545B2A9CCF150016369B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5545A2A9CCF150016369B /* UserService.swift */; };
 		9CF5545F2A9CD0170016369B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5545E2A9CD0170016369B /* SearchViewModel.swift */; };
 		9CF554612A9CDB5C0016369B /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF554602A9CDB5C0016369B /* EditProfileView.swift */; };
@@ -59,6 +60,7 @@
 		9CB346492A9BAB6F00E028B8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9CD2F80A2A9B5F11004589CD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9CD2F80D2A9B606F004589CD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		9CF189842AA0F375009BB327 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		9CF5545A2A9CCF150016369B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9CF5545E2A9CD0170016369B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		9CF554602A9CDB5C0016369B /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C5BB93E2A9F927E00DDEF6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A66172A98F8A800A7B578 /* UploadPostView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9C5BB93F2A9F928800DDEF6F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9CB346462A9BA12500E028B8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +163,23 @@
 			isa = PBXGroup;
 			children = (
 				9CD2F80D2A9B606F004589CD /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9CF189822AA0F346009BB327 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1E3D4F12A83AD9800CAFC68 /* FeedView.swift */,
+				B1E3D4F32A83ADA700CAFC68 /* FeedCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CF189832AA0F350009BB327 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9CF189842AA0F375009BB327 /* FeedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -284,8 +319,8 @@
 		B18C57022A8287EE002FDBBE /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				B1E3D4F12A83AD9800CAFC68 /* FeedView.swift */,
-				B1E3D4F32A83ADA700CAFC68 /* FeedCell.swift */,
+				9CF189822AA0F346009BB327 /* Views */,
+				9CF189832AA0F350009BB327 /* ViewModels */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -320,8 +355,8 @@
 		B18C57062A828825002FDBBE /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				9C7A66172A98F8A800A7B578 /* UploadPostView.swift */,
-				9C7A66192A98FECF00A7B578 /* UploadPostViewModel.swift */,
+				9C5BB93E2A9F927E00DDEF6F /* Views */,
+				9C5BB93F2A9F928800DDEF6F /* ViewModels */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -433,6 +468,7 @@
 				B19193ED2A851E6B009E87A3 /* User.swift in Sources */,
 				B1E3D4F42A83ADA700CAFC68 /* FeedCell.swift in Sources */,
 				B1E3D5022A83D1E700CAFC68 /* CreatePasswordView.swift in Sources */,
+				9CF189852AA0F375009BB327 /* FeedViewModel.swift in Sources */,
 				9CF5545B2A9CCF150016369B /* UserService.swift in Sources */,
 				9CACC62F2A9CFACF00803DB7 /* ImageUploader.swift in Sources */,
 				B14E3C2C2A98CFDE0064C76F /* ProfileHeaderView.swift in Sources */,
