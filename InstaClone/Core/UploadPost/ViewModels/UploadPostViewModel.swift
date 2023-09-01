@@ -43,7 +43,7 @@ class UploadPostViewModel: ObservableObject {
         
         // upload image
         guard let imageUrl = try await ImageUploader.uploadImage(image: uiImage) else { return }
-                
+        
         // create posr
         let post = Post(
             id: postRef.documentID,
